@@ -1,0 +1,27 @@
+{
+  "name": "homework-nodejslearn",
+  "version": "1.0.0",
+  "description": "homework for node.js learning course",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccoo23/homework-nodejslearn.git"
+  },
+  "keywords": [
+    "homework"
+  ],
+  "author": "vito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccoo23/homework-nodejslearn/issues"
+  },
+  "homepage": "https://github.com/ccoo23/homework-nodejslearn#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
