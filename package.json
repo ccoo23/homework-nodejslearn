@@ -27,7 +27,8 @@
   "homepage": "https://github.com/ccoo23/homework-nodejslearn#readme",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.95.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
