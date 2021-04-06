@@ -9,7 +9,8 @@
     "start": "nodemon index.js",
     "task1-1": "nodemon module2/task1-1.js",
     "task1-2": "nodemon module2/task1-2.js",
-    "task1-3": "nodemon module2/task1-3.js"
+    "task1-3": "nodemon module2/task1-3.js",
+    "task2-1": "nodemon module3/app.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,8 @@
   },
   "homepage": "https://github.com/ccoo23/homework-nodejslearn#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
