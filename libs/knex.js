@@ -5,14 +5,11 @@ const connections = {}
 const knex = KNEX({
   client: 'mysql',
   connection: {
-    host: config.get('127.0.0.1'),
-    port: config.get('3306'),
-    user: config.get('root'),
-    password: config.get('zyf527GENIUS'),
-    database: config.get('homework'),
-    ssl: {
-      cert: config.get('db.sslCert')
-    }
+    host: '127.0.0.1',
+    port: '3306',
+    user: 'root',
+    password: 'zyf527GENIUS',
+    database: 'homework'
   }
 })
 
@@ -23,14 +20,11 @@ export function getDbConnection (key = 'db') {
     connections[key] = KNEX({
       client: 'mysql',
       connection: {
-        host: config.get('127.0.0.1'),
-        port: config.get('3306'),
-        user: config.get('root'),
-        password: config.get('zyf527GENIUS'),
-        database: config.get('homework'),
-        ssl: {
-          cert: config.get('db.sslCert')
-        }
+        host: '127.0.0.1',
+        port: '3306',
+        user: 'root',
+        password: 'zyf527GENIUS',
+        database: 'homework'
       },
       log: {
         debug (rs) {
