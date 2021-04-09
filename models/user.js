@@ -30,6 +30,37 @@ class User {
       })
     })
   }
+
+  static updateUser(params) {
+    return new Promise((resolve, reject) => {
+      const db = KNEX
+      console.log('params', params)
+      db('user').update({
+        user_name: params.name,
+        password: params.password,
+        age: params.age
+      }).where({
+        user_id: params.userid
+      }).then((rs) => {
+        resolve(rs)
+      }).catch((err) => {
+        reject(err)
+      })
+    })
+  }
+
+  static deleteUser(userid) {
+    return new Promise((resolve, reject) => {
+      const db = KNEX
+      db('user').where({
+        user_id: userid
+      }).del().then((rs) => {
+        resolve(rs)
+      }).catch((err) => {
+        reject(err)
+      })
+    })
+  }
 }
 
 export default User

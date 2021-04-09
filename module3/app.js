@@ -34,8 +34,58 @@ app.post('/user/create', async function(req, res){
     console.log('RESSSSSSSSS', req.body)
     const userid = uuidv4()
     const rs = await User.createUser({ name, password, age, userid })
-    res.send(rs)
+    let resp = ''
+    if (!rs) {
+        resp = {
+            code: 10002,
+            message: '创建失败'
+        }
+    } else {
+        resp = {
+            code: 0,
+            message: '创建成功'
+        }
+    }
+    res.send(resp)
 })
+
+app.put('/user/update', async function(req, res){
+    const { name, password, age, userid } = req.query
+    console.log('RESSSSSSSSS', req.query)
+    const rs = await User.updateUser({ name, password, age, userid })
+    let resp = ''
+    if (!rs) {
+        resp = {
+            code: 10003,
+            message: '更新信息失败'
+        }
+    } else {
+        resp = {
+            code: 0,
+            message: '更新信息成功'
+        }
+    }
+    res.send(resp)
+})
+
+app.delete('/user/delete', async function(req, res){
+    const { userid } = req.query
+    const rs = await User.deleteUser(userid)
+    let resp = ''
+    if (!rs) {
+        resp = {
+            code: 10004,
+            message: '删除失败'
+        }
+    } else {
+        resp = {
+            code: 0,
+            message: '删除成功'
+        }
+    }
+    res.send(resp)
+})
+
 
 app.listen(3001,function(){   //监听3001端口
     console.log("Server running at 3001 port");
